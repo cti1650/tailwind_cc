@@ -1,6 +1,28 @@
 import { useCallback } from "react";
 import cc from "classcat";
 import copy from "clipboard-copy";
+
+export const SampleItem = (props) => {
+  const { className, title } = props;
+  const handleClick = () => {
+    copy(className);
+    const comment = "コピーしました「" + className + "」";
+    console.log(comment);
+    alert(comment);
+  };
+  return (
+    <>
+      <div
+        className={cc([className, "border bg-white h-full w-full rounded"])}
+        title={className}
+        onClick={handleClick}
+      >
+        {title}
+      </div>
+    </>
+  );
+};
+
 export const SampleBox = (props) => {
   const { className } = props;
   const handleClick = () => {

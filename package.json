@@ -10,6 +10,7 @@
     "@fullhuman/postcss-purgecss": "3.0.0",
     "@zeit/next-css": "1.0.1",
     "autoprefixer": "9.8.6",
+    "classcat": "5.0.3",
     "cssnano": "4.1.10",
     "next": "9.5.2",
     "postcss-easy-import": "3.0.0",

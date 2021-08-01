@@ -13,7 +13,7 @@ export const SampleItem = (props) => {
   return (
     <>
       <div
-        className={cc([className, "border bg-white h-full w-full rounded"])}
+        className={cc([className, "border h-full w-full rounded"])}
         title={className}
         onClick={handleClick}
       >

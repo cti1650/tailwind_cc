@@ -4,7 +4,7 @@ import Nav from "../components/nav";
 import { SampleBox, SampleBoxs } from "../components/parts/sample";
 
 const Home = () => (
-  <div className="container max-w-screen-md text-sans">
+  <div className="container max-w-screen-md mx-auto text-sans">
     <Head>
       <title>Tailwind CC</title>
       <link rel="icon" href="/favicon.ico" />

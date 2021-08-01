@@ -1,13 +1,11 @@
-import { useRef } from "react";
+import { useCallback } from "react";
 import cc from "classcat";
+import copy from "clipboard-copy";
 export const SampleBox = (props) => {
-  const inputEl = useRef(null);
   const { className } = props;
   const handleClick = () => {
-    inputEl.current.value = className;
-    inputEl.current.select();
-    document.execCommand("Copy");
-    const comment = "コピーしました「" + inputEl.current.value + "」";
+    copy(className);
+    const comment = "コピーしました「" + className + "」";
     console.log(comment);
     alert(comment);
   };
@@ -23,28 +21,19 @@ export const SampleBox = (props) => {
         >
           <div className="w-full h-full border bg-blue-400 rounded"></div>
         </div>
-        <input
-          type="text"
-          defaultValue={className}
-          className="w-0 h-0 p-0 m-0 outline-none text-xs"
-          ref={inputEl}
-        />
       </div>
     </>
   );
 };
 
 export const SampleBoxs = (props) => {
-  const inputEl = useRef(null);
   const { className } = props;
-  const handleClick = () => {
-    inputEl.current.value = className;
-    inputEl.current.select();
-    document.execCommand("Copy");
-    const comment = "コピーしました「" + inputEl.current.value + "」";
+  const handleClick = useCallback(() => {
+    copy(className);
+    const comment = "コピーしました「" + className + "」";
     console.log(comment);
     alert(comment);
-  };
+  }, [className]);
   return (
     <>
       <div className="p-2 h-24 w-24" title={className}>
@@ -64,12 +53,6 @@ export const SampleBoxs = (props) => {
           <div className="w-full h-full border bg-blue-400 rounded"></div>
           <div className="w-full h-full border bg-blue-400 rounded"></div>
         </div>
-        <input
-          type="text"
-          defaultValue={className}
-          className="w-0 h-0 p-0 m-0 outline-none text-xs"
-          ref={inputEl}
-        />
       </div>
     </>
   );

@@ -10,9 +10,18 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <h1>Tailwind CC</h1>
+    <div className="w-full text-center text-lg font-bold">Tailwind CC</div>
     <div className="w-full text-gray-900 p-4">
-      <SampleBox className="flex justify-center items-center" />
+      <div className="flex flex-row flex-wrap justify-center items-center">
+        <SampleBox className="flex justify-center items-center" />
+        <SampleBox className="flex justify-center items-center" />
+        <SampleBox className="flex justify-center items-center" />
+        <SampleBox className="flex justify-center items-center" />
+        <SampleBox className="flex justify-center items-center" />
+        <SampleBox className="flex justify-center items-center" />
+        <SampleBox className="flex justify-center items-center" />
+        <SampleBox className="flex justify-center items-center" />
+      </div>
     </div>
   </div>
 );

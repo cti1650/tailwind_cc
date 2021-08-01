@@ -10,18 +10,20 @@ export const SampleBox = (props) => {
   };
   return (
     <>
-      <div
-        className={className + " border bg-white h-20 w-20"}
-        onClick={handleClick}
-      >
-        <div className="border bg-blue-400 h-10 w-10"></div>
+      <div className="p-2">
+        <div
+          className={className + " border bg-white h-20 w-20"}
+          onClick={handleClick}
+        >
+          <div className="border bg-blue-400 h-10 w-10"></div>
+        </div>
+        <input
+          type="text"
+          defaultValue={className}
+          className="outline-none text-xs w-20"
+          ref={inputEl}
+        />
       </div>
-      <input
-        type="text"
-        defaultValue={className}
-        className="outline-none text-xs w-20"
-        ref={inputEl}
-      />
     </>
   );
 };

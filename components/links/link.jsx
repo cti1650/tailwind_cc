@@ -4,7 +4,7 @@ export const PageLink = (props) => {
       <>
         <div className="w-full h-full">
           <a href={href} title={title} target="_blank" rel="noopener noreferrer">
-            <img src={"http://capture.heartrails.com/free?" + href} alt="linkimg" />
+            <img src={"https://capture.heartrails.com/200x200/cool?" + href} alt="linkimg" />
           </a>
         </div>
       </>

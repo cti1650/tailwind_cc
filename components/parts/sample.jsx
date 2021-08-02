@@ -117,3 +117,20 @@ export const SampleFontFamilies = () => {
     </>
   );
 }
+
+export const SampleFontStyles = (props) => {
+  const {styleItems} = props;
+  return (
+    <>
+      <div className="grid grid-cols-3">
+        {styleItems.map((item,index) => {
+          return (
+              <div key={index} className="text-center rounded-xl">
+                <SampleItem className={item} title={item.replace('text-','').replace('font-','')} />
+              </div>
+            );
+          })}
+      </div>
+    </>
+  );
+}

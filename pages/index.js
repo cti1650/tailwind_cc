@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Nav from "../components/nav";
-import { SampleBox, SampleBoxs, SampleItem,SampleColors,SampleFontFamilies } from "../components/parts/sample";
+import { SampleBox, SampleBoxs, SampleItem,SampleColors,SampleFontFamilies,SampleFontStyles } from "../components/parts/sample";
 import { PageLink } from "../components/links/link";
 
 const Home = () => {
@@ -31,6 +31,8 @@ const Home = () => {
         <SampleColors />
         <div className="text-lg font-bold pt-4">Font Family</div>
         <SampleFontFamilies />
+        <div className="text-lg font-bold pt-4">Font Size</div>
+        <SampleFontStyles styleItems={['text-xs','text-sm','text-base','text-lg','text-xl','text-2xl','text-3xl','text-4xl','text-5xl','text-6xl']}/>
         <div className="text-lg font-bold pt-4">Links</div>
         <div className="pl-4 grid grid-cols-3">
           <PageLink href="https://tailwindcss.com/" title="Tailwind.css" />
@@ -48,6 +50,7 @@ const Home = () => {
           <PageLink href="https://chakra-ui.com/" title="Chakra UI" />
           <PageLink href="https://headlessui.dev/" title="headless UI" />
         </div>
+        
       </div>
     </div>
   );

@@ -1,20 +1,10 @@
 import React from "react";
 import Head from "next/head";
 import Nav from "../components/nav";
-import { SampleBox, SampleBoxs, SampleItem } from "../components/parts/sample";
+import { SampleBox, SampleBoxs, SampleItem,tw_colors } from "../components/parts/sample";
 
 const Home = () => {
-  const colors = [
-    "gray",
-    "red",
-    "yellow",
-    "green",
-    "blue",
-    "indigo",
-    "purple",
-    "pink"
-  ];
-  const color_numbers = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+  const colors = tw_colors();
   return (
     <div className="container max-w-screen-md mx-auto text-sans">
       <Head>
@@ -38,15 +28,13 @@ const Home = () => {
         </div>
         <div className="text-lg font-bold">Color</div>
         <div className="grid grid-cols-10">
-          {colors.map((color) => {
-            return color_numbers.map((n) => {
-              return (
-                <div className="h-8 rounded">
-                  <SampleItem className={"bg-" + color + "-" + n} />
+          {colors.map((color,index) => {
+            return (
+                <div key={index} className="h-8 rounded-xl">
+                  <SampleItem className={color} />
                 </div>
               );
-            });
-          })}
+            })}
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import cc from "classcat";
 import copy from "clipboard-copy";
 
 export const SampleItem = (props) => {
-  const { className, title } = props;
+  const { className, title,optionStyle } = props;
   const handleClick = () => {
     copy(className);
     const comment = "コピーしました「" + className + "」";
@@ -13,7 +13,7 @@ export const SampleItem = (props) => {
   return (
     <>
       <div
-        className={cc([className, "border h-full w-full rounded"])}
+        className={cc([className,optionStyle, "border h-full w-full rounded"])}
         title={className}
         onClick={handleClick}
       >
@@ -126,7 +126,7 @@ export const SampleFontStyles = (props) => {
         {styleItems.map((item,index) => {
           return (
               <div key={index} className="text-center rounded-xl">
-                <SampleItem className={cc([optionStyle,item])} title={item.replace('text-','').replace('font-','')} />
+                <SampleItem className={item} optionStyle={optionStyle} title={item.replace('text-','').replace('font-','')} />
               </div>
             );
           })}

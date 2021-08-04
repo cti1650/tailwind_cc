@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Nav from "../components/nav";
-import { SampleBox, SampleBoxs, SampleItem,SampleColors,SampleFontFamilies,SampleFontStyles } from "../components/parts/sample";
+import { SampleBox, SampleBoxs, SampleInlineStyles,SampleItem,SampleColors,SampleFontFamilies,SampleFontStyles } from "../components/parts/sample";
 import { PageLink } from "../components/links/link";
 import Link from "next/link";
 import { Popup } from "../components/popup/pop";
@@ -57,7 +57,11 @@ const Home = () => {
         <div className="text-lg font-bold pt-4">Font Weight</div>
         <SampleFontStyles onCopy={handleCopy} styleItems={['font-hairline','font-thin','font-light','font-normal','font-medium','font-semibold','font-bold','font-extrabold','font-black']} optionStyle="items-center h-full" />
         <div className="text-lg font-bold pt-4">Rounded</div>
-        <SampleFontStyles onCopy={handleCopy} styleItems={['rounded-none','rounded-sm','rounded','rounded-md','rounded-lg','rounded-xl','rounded-2xl','rounded-3xl','rounded-full']} optionStyle="p-2" />
+        <SampleFontStyles onCopy={handleCopy} styleItems={['rounded-none','rounded-sm','rounded','rounded-md','rounded-lg','rounded-xl','rounded-2xl','rounded-3xl','rounded-full']} baseStyle="p-2" />
+        <div className="text-lg font-bold pt-4">Text Align</div>
+        <SampleFontStyles onCopy={handleCopy} styleItems={['text-left','text-right','text-center','text-justify']} baseStyle="p-2" />
+        <div className="text-lg font-bold pt-4">Shadow</div>
+        <SampleFontStyles onCopy={handleCopy} styleItems={['shadow-inner','shadow-sm','shadow','shadow-md','shadow-lg','shadow-xl','shadow-2xl']} baseStyle="p-2" />
         <div className="text-lg font-bold pt-4">Links</div>
         <div className="pl-4 grid grid-cols-3">
           {links.map((link,index)=>{

@@ -22,6 +22,26 @@ export const SampleItem = (props) => {
     </>
   );
 };
+export const SampleInlineItem = (props) => {
+  const { className, title,optionStyle,onCopy } = props;
+  const handleClick = () => {
+    copy(className);
+    const comment = "コピーしました「" + className + "」";
+    onCopy(comment);
+    console.log(comment);
+  };
+  return (
+    <>
+      <div
+        className={cc([className,optionStyle, "border h-full w-full rounded"])}
+        title={className}
+        onClick={handleClick}
+      >
+        <span>{title}</span>
+      </div>
+    </>
+  );
+};
 
 export const SampleBox = (props) => {
   const { className,onCopy } = props;
@@ -128,7 +148,24 @@ export const SampleFontStyles = (props) => {
         {styleItems.map((item,index) => {
           return (
               <div key={index} className="text-center rounded-xl">
-                <SampleItem onCopy={onCopy} className={item} optionStyle={optionStyle} title={item.replace('text-','').replace('font-','')} />
+                <SampleItem onCopy={onCopy} className={item} optionStyle={baseStyle} title={item.replace('text-','').replace('font-','')} />
+              </div>
+            );
+          })}
+      </div>
+    </>
+  );
+}
+
+export const SampleInlineStyles = (props) => {
+  const {styleItems,optionStyle,baseStyle,onCopy} = props;
+  return (
+    <>
+      <div className={cc([optionStyle,"grid grid-cols-3"])}>
+        {styleItems.map((item,index) => {
+          return (
+              <div key={index} className="text-center rounded-xl">
+                <SampleInlineItem onCopy={onCopy} className={item} optionStyle={baseStyle} title={item} />
               </div>
             );
           })}

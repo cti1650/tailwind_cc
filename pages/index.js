@@ -38,6 +38,8 @@ const Home = () => {
       <div className="w-full text-gray-900 p-4">
         <div className="text-lg font-bold pt-4">Box</div>
         <div className="flex flex-row flex-wrap justify-center items-center">
+          <SampleBox onCopy={handleCopy} className="container mx-auto" dammyStyle="flex justify-center items-center px-5" />
+          <SampleBox onCopy={handleCopy} className="min-h-full flex justify-center items-center" fitNone={true} />
           <SampleBox onCopy={handleCopy} className="flex justify-center items-center" />
           <SampleBoxs onCopy={handleCopy} className="flex justify-center items-center" />
           <SampleBoxs onCopy={handleCopy} className="flex flex-col" />

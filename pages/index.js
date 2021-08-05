@@ -60,6 +60,10 @@ const Home = () => {
       title:
         'UIキットやブロック・コンポーネント集など、Tailwind CSS使用時の参考リソース',
     },
+    {
+      href: 'https://zenn.dev/taishi/articles/da33057d2c317d5068c1',
+      title: '全米が待ち望んでいた超便利なTailwind CSSツールリスト',
+    },
   ];
   return (
     <div className='container max-w-screen-md mx-auto text-sans'>

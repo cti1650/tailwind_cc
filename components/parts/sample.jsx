@@ -216,7 +216,7 @@ export const SampleFontFamilies = (props) => {
       <div className='grid grid-cols-3'>
         {FontFamilies.map((family, index) => {
           return (
-            <div key={index} className='h-8 text-center text-xl rounded-xl'>
+            <div key={index} className='text-center text-xl rounded-xl p-1'>
               <SampleItem onCopy={onCopy} className={family} title='tailwind' />
             </div>
           );
@@ -233,7 +233,7 @@ export const SampleFontStyles = (props) => {
       <div className={cc([optionStyle, 'grid grid-cols-3'])}>
         {styleItems.map((item, index) => {
           return (
-            <div key={index} className='text-center rounded-xl'>
+            <div key={index} className='text-center rounded-xl p-1'>
               <SampleItem
                 onCopy={onCopy}
                 className={item}

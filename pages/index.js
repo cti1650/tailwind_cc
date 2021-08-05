@@ -55,6 +55,11 @@ const Home = () => {
     },
     { href: 'https://chakra-ui.com/', title: 'Chakra UI' },
     { href: 'https://headlessui.dev/', title: 'headless UI' },
+    {
+      href: 'https://www.nxworld.net/tailwind-css-resources.html',
+      title:
+        'UIキットやブロック・コンポーネント集など、Tailwind CSS使用時の参考リソース',
+    },
   ];
   return (
     <div className='container max-w-screen-md mx-auto text-sans'>

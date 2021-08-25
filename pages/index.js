@@ -58,6 +58,7 @@ const Home = () => {
             <SampleBoxs onCopy={handleCopy} className='grid grid-cols-3' />
             <SampleBoxs onCopy={handleCopy} className='grid grid-cols-4' />
             <SampleBoxs onCopy={handleCopy} className='grid grid-cols-5' />
+            <SampleBoxs onCopy={handleCopy} className='fixed bottom-0 left-0 w-full h-6 flex flex-row' />
           </div>
         </div>
         <div>

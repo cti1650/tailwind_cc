@@ -74,7 +74,7 @@ export const SampleBox = (props) => {
 };
 
 export const SampleBoxs = (props) => {
-  const { className, dammyStyle, onCopy } = props;
+  const { className, dammyStyle, boxCount, size, onCopy } = props;
   const handleClick = useCallback(() => {
     copy(className);
     const comment = 'コピーしました「' + className + '」';
@@ -85,24 +85,32 @@ export const SampleBoxs = (props) => {
     <>
       <div className='p-2 h-24 w-24' title={className}>
         <div
-          className={cc([
-            'border bg-white p-2 rounded w-full h-full',
-            dammyStyle ? dammyStyle : className,
-          ])}
+          className='relative border bg-white p-2 rounded w-full h-full'
           onClick={handleClick}
         >
-          <div className='w-full h-full border bg-blue-400 rounded'></div>
-          <div className='w-full h-full border bg-blue-400 rounded'></div>
-          <div className='w-full h-full border bg-blue-400 rounded'></div>
-          <div className='w-full h-full border bg-blue-400 rounded'></div>
-          <div className='w-full h-full border bg-blue-400 rounded'></div>
-          <div className='w-full h-full border bg-blue-400 rounded'></div>
-          <div className='w-full h-full border bg-blue-400 rounded'></div>
-          <div className='w-full h-full border bg-blue-400 rounded'></div>
+          <div
+            className={cc([
+              { 'h-full w-full': !size, [size]: size },
+              dammyStyle ? dammyStyle : className,
+            ])}
+          >
+            {[...Array(boxCount)].map((value, index) => {
+              return (
+                <div
+                  key={index}
+                  className='w-full h-full border bg-blue-400 rounded'
+                ></div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </>
   );
+};
+
+SampleBoxs.defaultProps = {
+  boxCount: 8,
 };
 
 export const tw_colors = () => {

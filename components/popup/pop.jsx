@@ -17,7 +17,7 @@ export const Popup = (props) => {
       }, 2000);
     }
   }, [open]);
-  return (
+  return open ? (
     <>
       <div
         className={cc([
@@ -28,5 +28,5 @@ export const Popup = (props) => {
         {comment}
       </div>
     </>
-  );
+  ) : null;
 };

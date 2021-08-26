@@ -31,7 +31,7 @@ const Home = () => {
       <div className='w-full text-center text-2xl font-bold'>Tailwind CC</div>
       <div className='w-full text-gray-900 p-4'>
         <div>
-          <div className='text-lg font-bold pt-4'>Box</div>
+          <div className='text-lg font-bold pt-4'>Box Layout</div>
           <div className='flex flex-row flex-wrap justify-center items-center'>
             <SampleBox
               onCopy={handleCopy}
@@ -60,12 +60,43 @@ const Home = () => {
             <SampleBoxs onCopy={handleCopy} className='grid grid-cols-5' />
             <SampleBoxs
               onCopy={handleCopy}
-              className='fixed bottom-0 left-0 w-full flex flex-row'
-              dammyStyle='absolute bottom-0 left-0 w-full flex flex-row'
-              boxCount={4}
+              className='fixed bottom-0 left-0 w-full flex flex-row text-center'
+              dammyStyle='absolute bottom-0 left-0 w-full flex flex-row text-center'
+              boxCount={3}
               size='h-8'
             >
-              <div className='w-full h-full border bg-blue-400 rounded text-center'></div>
+              <div className='w-full h-full border bg-blue-400 text-lg text-white'>
+                ・
+              </div>
+            </SampleBoxs>
+            <SampleBoxs
+              onCopy={handleCopy}
+              className='fixed bottom-0 left-0 w-full flex flex-row divide-x-2 divide-blue-400 text-center'
+              dammyStyle='absolute bottom-0 left-0 w-full flex flex-row divide-x-2 divide-blue-400 text-center'
+              boxCount={3}
+              size='h-8'
+            >
+              <div className='w-full h-full border-0 bg-white text-lg text-blue-400'>
+                ・
+              </div>
+            </SampleBoxs>
+            <SampleBoxs
+              onCopy={handleCopy}
+              className='fixed top-0 left-0 h-full text-center'
+              dammyStyle='absolute top-0 left-0 h-full text-center'
+              boxCount={6}
+              size='w-8'
+            >
+              <div className='w-full h-2 border bg-blue-400 text-lg text-white'></div>
+            </SampleBoxs>
+            <SampleBoxs
+              onCopy={handleCopy}
+              className='fixed top-0 left-0 h-full divide-y-2 divide-blue-400 text-center'
+              dammyStyle='absolute top-0 left-0 h-full divide-y-2 divide-blue-400 text-center'
+              boxCount={6}
+              size='w-8'
+            >
+              <div className='w-full h-2 border-0 bg-white text-lg text-blue-400'></div>
             </SampleBoxs>
           </div>
         </div>
@@ -128,6 +159,20 @@ const Home = () => {
               'rounded-2xl',
               'rounded-3xl',
               'rounded-full',
+            ]}
+            baseStyle='p-2'
+          />
+        </div>
+        <div>
+          <div className='text-lg font-bold pt-4'>Border</div>
+          <SampleFontStyles
+            onCopy={handleCopy}
+            styleItems={[
+              'border-0',
+              'border',
+              'border-2',
+              'border-4',
+              'border-8',
             ]}
             baseStyle='p-2'
           />

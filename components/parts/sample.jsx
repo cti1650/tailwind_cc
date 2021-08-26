@@ -13,7 +13,15 @@ export const SampleItem = (props) => {
   return (
     <>
       <div
-        className={cc([className, optionStyle, 'border h-full w-full rounded'])}
+        className={cc([
+          className,
+          optionStyle,
+          'h-full w-full',
+          {
+            rounded: !~(className + optionStyle).indexOf('rounded'),
+            border: !~(className + optionStyle).indexOf('border'),
+          },
+        ])}
         title={className}
         onClick={handleClick}
       >

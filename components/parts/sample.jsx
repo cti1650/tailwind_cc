@@ -74,7 +74,7 @@ export const SampleBox = (props) => {
 };
 
 export const SampleBoxs = (props) => {
-  const { className, dammyStyle, boxCount, size, onCopy } = props;
+  const { className, dammyStyle, boxCount, size, onCopy, children } = props;
   const handleClick = useCallback(() => {
     copy(className);
     const comment = 'コピーしました「' + className + '」';
@@ -95,7 +95,9 @@ export const SampleBoxs = (props) => {
             ])}
           >
             {[...Array(boxCount)].map((value, index) => {
-              return (
+              return children ? (
+                children
+              ) : (
                 <div
                   key={index}
                   className='w-full h-full border bg-blue-400 rounded'

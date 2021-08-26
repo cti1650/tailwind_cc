@@ -64,7 +64,9 @@ const Home = () => {
               dammyStyle='absolute bottom-0 left-0 w-full flex flex-row'
               boxCount={4}
               size='h-8'
-            />
+            >
+              <div className='w-full h-full border bg-blue-400 rounded text-center'></div>
+            </SampleBoxs>
           </div>
         </div>
         <div>

@@ -16,7 +16,7 @@ export const SampleItem = (props) => {
         className={cc([
           className,
           optionStyle,
-          'h-full w-full',
+          'h-full w-full select-none',
           {
             rounded: !~(className + optionStyle).indexOf('rounded'),
             border: !~(className + optionStyle).indexOf('border'),
@@ -41,7 +41,11 @@ export const SampleInlineItem = (props) => {
   return (
     <>
       <div
-        className={cc([className, optionStyle, 'border h-full w-full rounded'])}
+        className={cc([
+          className,
+          optionStyle,
+          'border h-full w-full rounded select-none',
+        ])}
         title={className}
         onClick={handleClick}
       >
@@ -61,7 +65,7 @@ export const SampleBox = (props) => {
   };
   return (
     <>
-      <div className='p-2 h-24 w-24' title={className}>
+      <div className='p-2 h-24 w-24 select-none' title={className}>
         <div
           className={cc([
             'border bg-white p-2 rounded w-full h-full',
@@ -91,7 +95,7 @@ export const SampleBoxs = (props) => {
   }, [className]);
   return (
     <>
-      <div className='p-2 h-24 w-24' title={className}>
+      <div className='p-2 h-24 w-24 select-none' title={className}>
         <div
           className='relative border bg-white p-2 rounded w-full h-full'
           onClick={handleClick}
@@ -214,7 +218,7 @@ export const SampleColors = (props) => {
   const colors = tw_colors();
   return (
     <>
-      <div className='grid grid-cols-10'>
+      <div className='grid grid-cols-10 select-none'>
         {colors.map((color, index) => {
           return (
             <div key={index} className='h-8 rounded-xl'>
@@ -232,7 +236,7 @@ export const SampleFontFamilies = (props) => {
   const FontFamilies = ['font-sans', 'font-serif', 'font-mono'];
   return (
     <>
-      <div className='grid grid-cols-3'>
+      <div className='grid grid-cols-3 select-none'>
         {FontFamilies.map((family, index) => {
           return (
             <div key={index} className='text-center text-xl rounded-xl p-1'>
@@ -249,7 +253,7 @@ export const SampleFontStyles = (props) => {
   const { styleItems, optionStyle, baseStyle, onCopy } = props;
   return (
     <>
-      <div className={cc([optionStyle, 'grid grid-cols-3'])}>
+      <div className={cc([optionStyle, 'grid grid-cols-3 select-none'])}>
         {styleItems.map((item, index) => {
           return (
             <div key={index} className='text-center rounded-xl p-1'>
@@ -271,7 +275,7 @@ export const SampleInlineStyles = (props) => {
   const { styleItems, optionStyle, baseStyle, onCopy } = props;
   return (
     <>
-      <div className={cc([optionStyle, 'grid grid-cols-3'])}>
+      <div className={cc([optionStyle, 'grid grid-cols-3 select-none'])}>
         {styleItems.map((item, index) => {
           return (
             <div key={index} className='text-center rounded-xl'>

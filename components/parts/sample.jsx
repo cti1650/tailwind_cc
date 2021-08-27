@@ -121,6 +121,7 @@ export const SampleBoxs = (props) => {
 
 SampleBoxs.defaultProps = {
   boxCount: 8,
+  onCopy: () => {},
 };
 
 export const tw_colors = () => {

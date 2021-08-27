@@ -71,8 +71,30 @@ const Home = () => {
             </SampleBoxs>
             <SampleBoxs
               onCopy={handleCopy}
+              className='absolute top-0 left-0 w-full flex flex-row text-center'
+              dammyStyle='absolute top-0 left-0 w-full flex flex-row text-center'
+              boxCount={3}
+              size='h-8'
+            >
+              <div className='w-full h-full border bg-blue-400 text-lg text-white'>
+                ・
+              </div>
+            </SampleBoxs>
+            <SampleBoxs
+              onCopy={handleCopy}
               className='fixed bottom-0 left-0 w-full flex flex-row divide-x-2 divide-blue-400 text-center'
               dammyStyle='absolute bottom-0 left-0 w-full flex flex-row divide-x-2 divide-blue-400 text-center'
+              boxCount={3}
+              size='h-8'
+            >
+              <div className='w-full h-full border-0 bg-white text-lg text-blue-400'>
+                ・
+              </div>
+            </SampleBoxs>
+            <SampleBoxs
+              onCopy={handleCopy}
+              className='absolute top-0 left-0 w-full flex flex-row divide-x-2 divide-blue-400 text-center'
+              dammyStyle='absolute top-0 left-0 w-full flex flex-row divide-x-2 divide-blue-400 text-center'
               boxCount={3}
               size='h-8'
             >

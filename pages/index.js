@@ -25,7 +25,7 @@ const Home = () => {
     <div className='container max-w-screen-md mx-auto text-sans'>
       <Head>
         <title>Tailwind CC</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/icon/tailwind_cc.png' />
       </Head>
 
       <div className='w-full text-center text-2xl font-bold'>Tailwind CC</div>

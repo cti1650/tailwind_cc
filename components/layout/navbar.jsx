@@ -8,7 +8,7 @@ export default function Navbar({ children }) {
         <div className='w-full py-2 sm:py-6 text-center text-4xl font-bold'>
           Tailwind CC
         </div>
-        <ol className='w-full py-2 sm:py-4 flex justify-center items-center content-center space-x-6 text-gray-600'>
+        <ol className='w-full py-2 sm:py-4 flex justify-center items-center content-center space-x-6 text-gray-800'>
           <li>
             <Link href='/'>
               <a className='px-4 py-1 bg-white hover:bg-gray-200 rounded'>

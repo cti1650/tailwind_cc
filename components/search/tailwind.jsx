@@ -28,6 +28,8 @@ export const TailwindSearch = (props) => {
       <div className='w-full p-2 flex flex-col'>
         <div className='w-full h-8 flex flex-row space-x-2'>
           <input
+            id='q'
+            name='q'
             type='text'
             ref={searchRef}
             className='w-full px-4 focus:outline-none shadow-inner border border-gray-200 rounded'

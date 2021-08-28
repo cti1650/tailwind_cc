@@ -25,12 +25,12 @@ export const TailwindSearch = (props) => {
   );
   return (
     <>
-      <div className='w-full flex flex-col'>
-        <div className='w-full h-8 flex flex-row'>
+      <div className='w-full p-2 flex flex-col'>
+        <div className='w-full h-8 flex flex-row space-x-2'>
           <input
             type='text'
             ref={searchRef}
-            className='w-full mx-2 px-4 focus:outline-none shadow-inner border border-gray-200 rounded'
+            className='w-full px-4 focus:outline-none shadow-inner border border-gray-200 rounded'
           ></input>
           <button
             onClick={handleClick}

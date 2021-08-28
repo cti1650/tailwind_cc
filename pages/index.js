@@ -25,7 +25,7 @@ const Home = () => {
     <div className='container max-w-screen-md mx-auto text-sans'>
       <Head>
         <title>Tailwind CC</title>
-        <link rel='icon' href='/icon/tailwind_cc.png' />
+        <link rel='icon' href='/icon/tailwind_cc-128x128.ico' />
         <meta name='viewport' content='user-scalable=no' />
         <meta
           name='viewport'
@@ -43,10 +43,7 @@ const Home = () => {
         />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://tailwind-cc.vercel.app/' />
-        <meta
-          property='og:image'
-          content='https://capture.heartrails.com/200x200/cool?https://tailwind-cc.vercel.app/'
-        />
+        <meta property='og:image' content='/icon/tailwind_cc-128x128.ico' />
         <meta property='og:site_name' content='Tailwind CC' />
         <meta property='og:locale' content='ja_JP' />
       </Head>

@@ -14,6 +14,7 @@ import { PageLink } from '../components/links/link';
 import Link from 'next/link';
 import { Popup } from '../components/popup/pop';
 import { LinkData } from '../components/links/linkData';
+import { TailwindSearch } from '../components/search/tailwind';
 
 const Home = () => {
   const [comment, setComment] = useState('');
@@ -49,7 +50,9 @@ const Home = () => {
       </Head>
 
       <div className='w-full text-center text-2xl font-bold'>Tailwind CC</div>
+
       <div className='w-full text-gray-900 p-4'>
+        <TailwindSearch />
         <div>
           <div className='text-lg font-bold pt-4'>Box Layout</div>
           <div className='flex flex-row flex-wrap justify-center items-center'>

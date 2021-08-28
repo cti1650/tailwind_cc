@@ -26,6 +26,29 @@ const Home = () => {
       <Head>
         <title>Tailwind CC</title>
         <link rel='icon' href='/icon/tailwind_cc.png' />
+        <meta name='viewport' content='user-scalable=no' />
+        <meta
+          name='viewport'
+          content='width=device-width,initial-scale=1.0,minimum-scale=1.0'
+        ></meta>
+        <meta
+          name='description'
+          content='Tailwind.cssを使ったレイアウトの方法や文字など見た目を確認しながらclassをコピペできるようにしたチートシートです！'
+        />
+        <meta name='keywords' content='HTML,CSS,Tailwind.css'></meta>
+        <meta property='og:title' content='Tailwind CC' />
+        <meta
+          property='og:description'
+          content='Tailwind.cssを使ったレイアウトの方法や文字など見た目を確認しながらclassをコピペできるようにしたチートシートです！'
+        />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://tailwind-cc.vercel.app/' />
+        <meta
+          property='og:image'
+          content='https://capture.heartrails.com/200x200/cool?https://tailwind-cc.vercel.app/'
+        />
+        <meta property='og:site_name' content='Tailwind CC' />
+        <meta property='og:locale' content='ja_JP' />
       </Head>
 
       <div className='w-full text-center text-2xl font-bold'>Tailwind CC</div>

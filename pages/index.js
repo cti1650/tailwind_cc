@@ -173,6 +173,7 @@ const Home = () => {
               'rounded',
               'rounded-md',
               'rounded-lg',
+              'rounded-xl',
               'rounded-full',
             ]}
             baseStyle='p-2'

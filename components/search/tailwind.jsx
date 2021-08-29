@@ -40,7 +40,7 @@ export const TailwindSearch = (props) => {
             name='q'
             type='text'
             ref={searchRef}
-            placeholder='Google or Official Page Search'
+            placeholder={check ? 'Official Page Search' : 'Google Search'}
             className='w-full px-4 focus:outline-none shadow-inner border border-gray-200 rounded-xl'
           ></input>
 
@@ -65,7 +65,7 @@ export const TailwindSearch = (props) => {
               <div
                 onClick={handleCheckClick}
                 className={cc([
-                  'w-12 h-6 mx-auto border border-gray-400 rounded-full shadow-inner',
+                  'w-12 h-6 mx-auto border border-gray-200 rounded-full shadow-inner',
                   {
                     'bg-green-300': check,
                     'bg-white': !check,
@@ -74,7 +74,7 @@ export const TailwindSearch = (props) => {
               >
                 <div
                   className={cc([
-                    'transition ease-in duration-700 w-7 h-7 -m-0.5 bg-white border border-gray-400 rounded-full shadow-md',
+                    'w-7 h-7 -m-0.5 bg-white border border-gray-200 rounded-full shadow-md',
                     {
                       'ml-auto': check,
                       'mr-auto': !check,

@@ -41,14 +41,14 @@ export const TailwindSearch = (props) => {
             type='text'
             ref={searchRef}
             placeholder='Google or Official Page Search'
-            className='w-full px-4 focus:outline-none shadow-inner border border-gray-200 rounded'
+            className='w-full px-4 focus:outline-none shadow-inner border border-gray-200 rounded-xl'
           ></input>
 
           <button
             onClick={handleClick}
             onBlur={handleBlur}
             title={'search'}
-            className='w-16 shadow rounded-sm focus:outline-none hover:bg-blue-100 focus:bg-blue-100'
+            className='w-16 shadow rounded-xl focus:outline-none hover:text-blue-600 focus:text-blue-600'
           >
             search
           </button>
@@ -65,16 +65,16 @@ export const TailwindSearch = (props) => {
               <div
                 onClick={handleCheckClick}
                 className={cc([
-                  'w-12 h-6 p-1 mx-auto border border-gray-400 rounded-full',
+                  'w-12 h-6 mx-auto border border-gray-400 rounded-full shadow-inner',
                   {
-                    'bg-blue-200': check,
+                    'bg-green-300': check,
                     'bg-white': !check,
                   },
                 ])}
               >
                 <div
                   className={cc([
-                    'w-4 h-4 bg-white border border-gray-400 rounded-full',
+                    'transition ease-in duration-700 w-7 h-7 -m-0.5 bg-white border border-gray-400 rounded-full shadow-md',
                     {
                       'ml-auto': check,
                       'mr-auto': !check,

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { PageLink } from '../components/links/link';
-import Link from 'next/link';
-import { LinkData } from '../components/links/linkData';
+import { PageLink } from '@comp/links/link';
+import { LinkData } from '@comp/links/linkData';
 
 const Home = () => {
   const links = LinkData();
@@ -19,7 +18,7 @@ const Home = () => {
           <div className='pl-4 grid grid-cols-3'>
             {links.map((link, index) => {
               return (
-                <PageLink key={index} href={link.href} title={Link.title} />
+                <PageLink key={index} href={link.href} title={link.title} />
               );
             })}
           </div>

@@ -1,6 +1,8 @@
 import { useCallback, useRef, useState } from 'react';
 import cc from 'classcat';
 
+import * as gtag from '@lib/gtag';
+
 export const TailwindSearch = (props) => {
   const searchRef = useRef(null);
   const [check, setCheck] = useState(false);
@@ -9,6 +11,11 @@ export const TailwindSearch = (props) => {
       const optionKeyword = check
         ? 'q=site%3Atailwindcss.com+'
         : 'q=tailwindcss.css+';
+      gtag.event({
+        action: check ? 'Official Page Search' : 'Google Search',
+        category: 'Search',
+        label: searchRef.current.value,
+      });
       window.open(
         'https://www.google.com/search?' +
           optionKeyword +

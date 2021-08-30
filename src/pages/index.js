@@ -8,9 +8,9 @@ import {
   SampleColors,
   SampleFontFamilies,
   SampleFontStyles,
-} from '../components/parts/sample';
-import { Popup } from '../components/popup/pop';
-import { LinkData } from '../components/links/linkData';
+} from '@comp/parts/sample';
+import { Popup } from '@comp/popup/pop';
+import { LinkData } from '@comp/links/linkData';
 
 const Home = () => {
   const [comment, setComment] = useState('');

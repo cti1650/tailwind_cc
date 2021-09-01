@@ -11,6 +11,7 @@ import {
 } from '@comp/parts/sample';
 import { Popup } from '@comp/popup/pop';
 import { LinkData } from '@comp/links/linkData';
+import { SampleFlexBoxs } from '@comp/parts/sample';
 
 const Home = () => {
   const [comment, setComment] = useState('');
@@ -121,6 +122,14 @@ const Home = () => {
         <div>
           <div className='sticky text-lg font-bold pt-4'>Color</div>
           <SampleColors onCopy={handleCopy} />
+        </div>
+        <div>
+          <div className='text-lg font-bold pt-4'>Flex Option</div>
+          <SampleFlexBoxs
+            onCopy={handleCopy}
+            className='flex flex-row'
+            childClasses={['flex-none w-1/5', 'flex-grow', 'flex-none w-1/5']}
+          />
         </div>
         <div>
           <div className='sticky text-lg font-bold pt-4'>Font Family</div>

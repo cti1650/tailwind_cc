@@ -203,6 +203,20 @@ const Home = () => {
           />
         </div>
         <div>
+          <div className='sticky text-lg font-bold pt-4'>Border Style</div>
+          <SampleFontStyles
+            onCopy={handleCopy}
+            styleItems={[
+              'border-solid',
+              'border-dashed',
+              'border-dotted',
+              'border-double',
+              'border-none',
+            ]}
+            baseStyle='p-2 border-2'
+          />
+        </div>
+        <div>
           <div className='sticky text-lg font-bold pt-4'>Text Align</div>
           <SampleFontStyles
             onCopy={handleCopy}

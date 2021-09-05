@@ -2,6 +2,7 @@ import { useCallback, useRef, useState } from 'react';
 import cc from 'classcat';
 
 import * as gtag from '@lib/gtag';
+import React from 'react';
 
 export const TailwindSearch = (props) => {
   const searchRef = useRef(null);
@@ -18,8 +19,8 @@ export const TailwindSearch = (props) => {
       });
       window.open(
         'https://www.google.com/search?' +
-          optionKeyword +
-          encodeURIComponent(searchRef.current.value)
+        optionKeyword +
+        encodeURIComponent(searchRef.current.value)
       );
     },
     [searchRef, check]

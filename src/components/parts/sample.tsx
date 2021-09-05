@@ -2,6 +2,7 @@ import { useCallback } from 'react';
 import cc from 'classcat';
 import copy from 'clipboard-copy';
 import * as gtag from '@lib/gtag';
+import React from 'react';
 
 export const SampleItem = (props) => {
   const { className, title, optionStyle, onCopy } = props;
@@ -146,7 +147,7 @@ export const SampleBoxs = (props) => {
 
 SampleBoxs.defaultProps = {
   boxCount: 8,
-  onCopy: () => {},
+  onCopy: () => { },
 };
 
 export const SampleFlexBoxs = (props) => {
@@ -207,7 +208,7 @@ export const SampleFlexBoxs = (props) => {
 
 SampleFlexBoxs.defaultProps = {
   boxCount: 8,
-  onCopy: () => {},
+  onCopy: () => { },
   childClasses: [],
 };
 

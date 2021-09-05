@@ -9,6 +9,7 @@ import {
   SampleFontFamilies,
   SampleFontStyles,
 } from '@comp/parts/sample';
+import { GetStaticProps } from 'next';
 import { Popup } from '@comp/popup/pop';
 import { LinkData } from '@comp/links/linkData';
 import { SampleFlexBoxs } from '@comp/parts/sample';
@@ -251,7 +252,7 @@ const Home = () => {
   );
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async context => {
   return {
     props: {},
   };

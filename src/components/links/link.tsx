@@ -1,4 +1,5 @@
 import * as gtag from '@lib/gtag';
+import React from 'react';
 export const PageLink = (props) => {
   const { href, title } = props;
   const ClickEvent = () => {

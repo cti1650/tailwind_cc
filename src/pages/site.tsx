@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import { GetStaticProps } from 'next';
 import { PageLink } from '@comp/links/link';
 import { LinkData } from '@comp/links/linkData';
 
@@ -28,7 +29,7 @@ const Home = () => {
   );
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async context => {
   return {
     props: {},
   };

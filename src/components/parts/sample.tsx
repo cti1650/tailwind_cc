@@ -1,3 +1,6 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useCallback } from 'react';
 import cc from 'classcat';
 import copy from 'clipboard-copy';
@@ -93,7 +96,10 @@ export const SampleBox = (props) => {
           <div
             className={cc([
               'border bg-blue-400 rounded',
-              { 'h-full w-full': !size, 'h-6 w-6': size === 'small' },
+              {
+                'h-full w-full': !size,
+                'h-6 w-6': size === 'small',
+              },
             ])}
           ></div>
         </div>
@@ -114,7 +120,7 @@ export const SampleBoxs = (props) => {
       label: className,
     });
     console.log(comment);
-  }, [className]);
+  }, [className, onCopy]);
   return (
     <>
       <div className='p-2 h-24 w-24 select-none' title={className}>
@@ -147,7 +153,7 @@ export const SampleBoxs = (props) => {
 
 SampleBoxs.defaultProps = {
   boxCount: 8,
-  onCopy: () => { },
+  onCopy: () => {},
 };
 
 export const SampleFlexBoxs = (props) => {
@@ -208,7 +214,7 @@ export const SampleFlexBoxs = (props) => {
 
 SampleFlexBoxs.defaultProps = {
   boxCount: 8,
-  onCopy: () => { },
+  onCopy: () => {},
   childClasses: [],
 };
 

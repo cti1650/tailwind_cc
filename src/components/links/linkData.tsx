@@ -25,7 +25,10 @@ export const LinkData = () => {
         title: 'Tailwind-Cheat-Sheet',
       },
       { href: 'https://tailblocks.cc/', title: 'Tailblocks' },
-      { href: 'https://tailwindtemplates.io/', title: 'Tailwind Templates' },
+      {
+        href: 'https://tailwindtemplates.io/',
+        title: 'Tailwind Templates',
+      },
       { href: 'https://daisyui.com/', title: 'Daisy UI' },
       {
         href: 'https://devdojo.com/tailwindcss/buttons',

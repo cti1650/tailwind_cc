@@ -1,7 +1,7 @@
 import 'tailwindcss/tailwind.css';
 
 import React from 'react';
-import App, { AppProps } from 'next/app';
+import { AppProps } from 'next/app';
 import Layout from '@comp/layout/layout';
 import Head from 'next/head';
 import { usePageView } from '@hooks/usePageView';

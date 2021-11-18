@@ -6,9 +6,9 @@ export default function Layout({ children }) {
   return (
     <>
       <div className='container max-w-screen-md mx-auto text-sans'>
-        <Navbar children={undefined} />
+        <Navbar />
         <main>{children}</main>
-        <Footer children={undefined} />
+        <Footer />
       </div>
     </>
   );

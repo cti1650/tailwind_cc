@@ -29,10 +29,10 @@ const Home = () => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async context => {
+export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {},
   };
-}
+};
 
 export default Home;

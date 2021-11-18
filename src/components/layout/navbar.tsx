@@ -2,7 +2,11 @@ import Link from 'next/link';
 import React from 'react';
 import { TailwindSearch } from '../search/tailwind';
 
-export default function Navbar({ children }) {
+type typeProps = {
+  children?: JSX.Element;
+};
+
+export default function Navbar({ children }: typeProps) {
   return (
     <>
       <div className='w-full'>

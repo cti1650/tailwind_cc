@@ -21,11 +21,19 @@ export const PageLink = (props) => {
             rel='noopener noreferrer'
           >
             <img
-              src={'https://capture.heartrails.com/200x200/cool/delay=3?' + href}
+              src={
+                'https://capture.heartrails.com/200x200/cool/delay=3?' + href
+              }
               alt='linkimg'
             />
           </a>
-          {title && (<div className="absolute bottom-0 left-0 px-3 pb-5"><span className="bg-white whitespace-pre-wrap px-2 py-1 rounded text-xs">{title}</span></div>)}
+          {title && (
+            <div className='absolute bottom-0 left-0 px-3 pb-5'>
+              <span className='bg-white whitespace-pre-wrap px-2 py-1 rounded text-xs'>
+                {title}
+              </span>
+            </div>
+          )}
         </div>
       </div>
     </>

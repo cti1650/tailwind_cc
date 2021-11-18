@@ -19,12 +19,30 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: [
+    'simple-import-sort',
+    'tailwindcss',
+    'import-access',
+    'react',
+    '@typescript-eslint',
+  ],
   rules: {
     semi: ['error', 'always'],
     quotes: ['error', 'single'],
-    'react/prop-types': 'error',
-    'no-undef': 'error',
+    'react/prop-types': 'off',
+    'no-unused-vars': 'off',
+    'no-undef': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton'],
+      },
+    ],
   },
   settings: {
     react: {

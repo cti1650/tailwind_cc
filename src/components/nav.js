@@ -11,15 +11,15 @@ const links = [
 
 const Nav = () => (
   <nav className='text-center'>
-    <ul className='flex justify-between px-4 my-4 py-1'>
-      <li className='flex px-2 py-1'>
+    <ul className='flex justify-between py-1 px-4 my-4'>
+      <li className='flex py-1 px-2'>
         <Link href='/'>
-          <a className='text-blue-500	no-underline text-sm'>Home</a>
+          <a className='text-sm text-blue-500	no-underline'>Home</a>
         </Link>
       </li>
       {links.map(({ key, href, label }) => (
-        <li key={key} className='flex px-2 py-1'>
-          <a className='text-blue-500	no-underline text-sm' href={href}>
+        <li key={key} className='flex py-1 px-2'>
+          <a className='text-sm text-blue-500	no-underline' href={href}>
             {label}
           </a>
         </li>

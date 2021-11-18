@@ -1,6 +1,10 @@
-import React from "react";
+import React from 'react';
 
-export default function Footer({ children }) {
+type typeProps = {
+  children?: JSX.Element;
+};
+
+export default function Footer({ children }: typeProps) {
   return (
     <>
       <div className='pt-10 pb-4 text-center text-xs font-thin text-gray-800'>

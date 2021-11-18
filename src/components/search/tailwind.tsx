@@ -19,20 +19,17 @@ export const TailwindSearch = (props) => {
       });
       window.open(
         'https://www.google.com/search?' +
-        optionKeyword +
-        encodeURIComponent(searchRef.current.value)
+          optionKeyword +
+          encodeURIComponent(searchRef.current.value)
       );
     },
     [searchRef, check]
   );
-  const handleCheckClick = useCallback(
-    (e) => {
-      setCheck((prev) => {
-        return !prev;
-      });
-    },
-    [check]
-  );
+  const handleCheckClick = useCallback((e) => {
+    setCheck((prev) => {
+      return !prev;
+    });
+  }, []);
   const handleBlur = useCallback(
     (e) => {
       searchRef.current.focus();

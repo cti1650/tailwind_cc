@@ -8,11 +8,11 @@ import {
   SampleColors,
   SampleFontFamilies,
   SampleFontStyles,
-} from '@comp/parts/sample';
+  SampleFlexBoxs
+} from '@comp/parts';
 import { GetStaticProps } from 'next';
 import { Popup } from '@comp/popup/pop';
 import { LinkData } from '@comp/links/linkData';
-import { SampleFlexBoxs } from '@comp/parts/sample';
 
 const Home = () => {
   const [comment, setComment] = useState('');
@@ -56,6 +56,9 @@ const Home = () => {
             <SampleBoxs onCopy={handleCopy} className='grid grid-cols-3' />
             <SampleBoxs onCopy={handleCopy} className='grid grid-cols-4' />
             <SampleBoxs onCopy={handleCopy} className='grid grid-cols-5' />
+            <SampleBoxs onCopy={handleCopy} className='grid grid-rows-[auto,1fr,auto]' boxCount={3}>
+              <div className="min-h-[10px] bg-blue-400 m-[1px] rounded"></div>
+            </SampleBoxs> 
             <SampleBoxs
               onCopy={handleCopy}
               className='fixed bottom-0 left-0 w-full flex flex-row text-center'

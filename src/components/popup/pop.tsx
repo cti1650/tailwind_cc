@@ -22,7 +22,7 @@ export const Popup = (props) => {
     <>
       <div
         className={cc([
-          'fixed bottom-0 right-0 py-2 px-4 border shadow-lg bg-gray-100 text-gray-800 rounded-tl duration-300',
+          'fixed bottom-0 right-0 py-2 px-4 z-50 border shadow-lg bg-gray-100 text-gray-800 rounded-tl duration-300',
           { invisible: !open },
         ])}
       >

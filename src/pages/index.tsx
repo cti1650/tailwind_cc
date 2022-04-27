@@ -8,11 +8,12 @@ import {
   SampleColors,
   SampleFontFamilies,
   SampleFontStyles,
-  SampleFlexBoxs
+  SampleFlexBoxs,
 } from '@comp/parts';
 import { GetStaticProps } from 'next';
 import { Popup } from '@comp/popup/pop';
 import { LinkData } from '@comp/links/linkData';
+import { Section } from '@comp/layout/Section';
 
 const Home = () => {
   const [comment, setComment] = useState('');
@@ -28,8 +29,7 @@ const Home = () => {
       </Head>
 
       <div className='w-full text-gray-900 p-4'>
-        <div>
-          <div className='sticky text-lg font-bold pt-4'>Box Layout</div>
+        <Section title='Box Layout'>
           <div className='flex flex-row flex-wrap justify-center items-center'>
             <SampleBox
               onCopy={handleCopy}
@@ -56,9 +56,13 @@ const Home = () => {
             <SampleBoxs onCopy={handleCopy} className='grid grid-cols-3' />
             <SampleBoxs onCopy={handleCopy} className='grid grid-cols-4' />
             <SampleBoxs onCopy={handleCopy} className='grid grid-cols-5' />
-            <SampleBoxs onCopy={handleCopy} className='grid grid-rows-[auto,1fr,auto]' boxCount={3}>
-              <div className="min-h-[10px] bg-blue-400 m-[1px] rounded"></div>
-            </SampleBoxs> 
+            <SampleBoxs
+              onCopy={handleCopy}
+              className='grid grid-rows-[auto,1fr,auto]'
+              boxCount={3}
+            >
+              <div className='min-h-[10px] bg-blue-400 m-[1px] rounded'></div>
+            </SampleBoxs>
             <SampleBoxs
               onCopy={handleCopy}
               className='fixed bottom-0 left-0 w-full flex flex-row text-center'
@@ -122,25 +126,23 @@ const Home = () => {
               <div className='w-full h-2 border-0 bg-white text-lg text-blue-400'></div>
             </SampleBoxs>
           </div>
-        </div>
-        <div>
-          <div className='sticky text-lg font-bold pt-4'>Color</div>
+        </Section>
+        <Section title='Color'>
           <SampleColors onCopy={handleCopy} />
-        </div>
-        <div>
-          <div className='text-lg font-bold pt-4'>Flex Option</div>
+        </Section>
+
+        <Section title='Flex Option'>
           <SampleFlexBoxs
             onCopy={handleCopy}
             className='flex flex-row'
             childClasses={['flex-none w-1/5', 'flex-grow', 'flex-none w-1/5']}
           />
-        </div>
-        <div>
-          <div className='sticky text-lg font-bold pt-4'>Font Family</div>
+        </Section>
+
+        <Section title='Font Family'>
           <SampleFontFamilies onCopy={handleCopy} />
-        </div>
-        <div>
-          <div className='sticky text-lg font-bold pt-4'>Font Size</div>
+        </Section>
+        <Section title='Font Size'>
           <SampleFontStyles
             onCopy={handleCopy}
             styleItems={[
@@ -157,9 +159,8 @@ const Home = () => {
             ]}
             optionStyle='items-center h-full'
           />
-        </div>
-        <div>
-          <div className='sticky text-lg font-bold pt-4'>Font Weight</div>
+        </Section>
+        <Section title='Font Weight'>
           <SampleFontStyles
             onCopy={handleCopy}
             styleItems={[
@@ -175,9 +176,8 @@ const Home = () => {
             ]}
             optionStyle='items-center h-full'
           />
-        </div>
-        <div>
-          <div className='sticky text-lg font-bold pt-4'>Rounded</div>
+        </Section>
+        <Section title='Rounded'>
           <SampleFontStyles
             onCopy={handleCopy}
             styleItems={[
@@ -191,9 +191,8 @@ const Home = () => {
             ]}
             baseStyle='p-2'
           />
-        </div>
-        <div>
-          <div className='sticky text-lg font-bold pt-4'>Border</div>
+        </Section>
+        <Section title='Border'>
           <SampleFontStyles
             onCopy={handleCopy}
             styleItems={[
@@ -205,9 +204,8 @@ const Home = () => {
             ]}
             baseStyle='p-2'
           />
-        </div>
-        <div>
-          <div className='sticky text-lg font-bold pt-4'>Border Style</div>
+        </Section>
+        <Section title='Border Style'>
           <SampleFontStyles
             onCopy={handleCopy}
             styleItems={[
@@ -219,9 +217,8 @@ const Home = () => {
             ]}
             baseStyle='p-2 border-2'
           />
-        </div>
-        <div>
-          <div className='sticky text-lg font-bold pt-4'>Text Align</div>
+        </Section>
+        <Section title='Text Align'>
           <SampleFontStyles
             onCopy={handleCopy}
             styleItems={[
@@ -232,9 +229,8 @@ const Home = () => {
             ]}
             baseStyle='p-2'
           />
-        </div>
-        <div>
-          <div className='sticky text-lg font-bold pt-4'>Shadow</div>
+        </Section>
+        <Section title='Shadow'>
           <SampleFontStyles
             onCopy={handleCopy}
             styleItems={[
@@ -248,7 +244,7 @@ const Home = () => {
             ]}
             baseStyle='p-2'
           />
-        </div>
+        </Section>
         <Popup comment={comment} />
       </div>
     </div>

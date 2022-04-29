@@ -2,23 +2,15 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import cc from 'classcat';
-import copy from 'clipboard-copy';
-import * as gtag from '@lib/gtag';
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useClassNameCopy } from '@hooks/useClassNameCopy';
 
 export const SampleInlineItem = (props) => {
-  const { className, title, optionStyle, onCopy } = props;
-  const handleClick = () => {
-    copy(className);
-    const comment = 'コピーしました「' + className + '」';
-    onCopy(comment);
-    gtag.event({
-      action: 'Class Copy',
-      category: 'Classes',
-      label: className,
-    });
-    console.log(comment);
-  };
+  const { className, title, optionStyle } = props;
+  const { setClipboard } = useClassNameCopy();
+  const handleClick = useCallback(() => {
+    setClipboard(className);
+  }, [className]);
   return (
     <>
       <div

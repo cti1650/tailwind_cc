@@ -5,6 +5,7 @@ import { AppProps } from 'next/app';
 import Layout from '@comp/layout/layout';
 import Head from 'next/head';
 import { usePageView } from '@hooks/usePageView';
+import { Toaster } from 'react-hot-toast';
 
 const TailwindApp = (props: AppProps) => {
   const { Component, pageProps } = props;
@@ -36,6 +37,7 @@ const TailwindApp = (props: AppProps) => {
         <meta property='og:locale' content='ja_JP' />
       </Head>
       <Component {...pageProps} />
+      <Toaster toastOptions={{'className':'text-center'}}/>
     </Layout>
   );
 };

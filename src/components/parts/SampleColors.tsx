@@ -85,8 +85,7 @@ export const tw_colors = () => {
     ];
   };
   
-  export const SampleColors = (props) => {
-    const { onCopy } = props;
+  export const SampleColors = () => {
     const colors = tw_colors();
     return (
       <>
@@ -94,7 +93,7 @@ export const tw_colors = () => {
           {colors.map((color, index) => {
             return (
               <div key={index} className='h-8 rounded-xl'>
-                <SampleItem onCopy={onCopy} className={color} />
+                <SampleItem className={color} />
               </div>
             );
           })}

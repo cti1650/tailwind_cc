@@ -1,7 +1,6 @@
 import { SampleItem } from './SampleItem';
 
 export const SampleFontFamilies = (props) => {
-  const { onCopy } = props;
   const FontFamilies = ['font-sans', 'font-serif', 'font-mono'];
   return (
     <>
@@ -9,7 +8,7 @@ export const SampleFontFamilies = (props) => {
         {FontFamilies.map((family, index) => {
           return (
             <div key={index} className='text-center text-xl rounded-xl p-1'>
-              <SampleItem onCopy={onCopy} className={family} title='tailwind' />
+              <SampleItem className={family} title='tailwind' />
             </div>
           );
         })}

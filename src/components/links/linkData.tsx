@@ -53,6 +53,46 @@ export const LinkData = () => {
         href: 'https://zenn.dev/taishi/articles/da33057d2c317d5068c1',
         title: '全米が待ち望んでいた超便利なTailwind CSSツールリスト',
       },
+      {
+        href: 'https://omkz.net/tailwind-tools/',
+        title: '【時間を節約】tailwind CSSで爆速開発のためのツール集',
+      }, 
+      {
+        href: 'https://programming-shikiho.com/tailwindcss-ui-resource/#Tailwind_UI',
+        title: 'Tailwind CSS の UIコンポーネント・キットの参考サイト集',
+      }, 
+      {
+        href: 'https://flowrift.com/w/',
+        title: 'Flowrift',
+      }, 
+      {
+        href: 'https://wickedblocks.dev/',
+        title: 'Wickedblocks',
+      }, 
+      {
+        href: 'https://www.tailwind-kit.com/components',
+        title: 'Tailwind UI KIT',
+      }, 
+      {
+        href: 'https://flowbite.com/',
+        title: 'Flowbite',
+      }, 
+      {
+        href: 'https://tailwindcomponents.com/',
+        title: 'TailwindComponents',
+      }, 
+      {
+        href: 'https://mynaui.com/',
+        title: 'myna ui',
+      }, 
+      {
+        href: 'https://www.material-tailwind.com/',
+        title: 'Material Tailwind',
+      },
+      {
+        href: 'https://mantine.dev/',
+        title: 'Mantine',
+      },
     ];
   }, []);
 };
